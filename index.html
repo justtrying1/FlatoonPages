@@ -18,34 +18,7 @@
  </script>
  <noscript><div><img src="https://mc.yandex.ru/watch/99824809" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
- <script>
-    const nameCookie = "_ym_uid";
-    const links = document.querySelectorAll('a[href*="{client_id_treckru}"]');
-    
-    function checkCookie() {
-      const clientId = getCookie(nameCookie);
-          console.log(clientId);
-      if (clientId) {
-        links.forEach((link) => {
-          const href = link.getAttribute("href");
-          if (href && href.includes("{client_id_treckru}")) {
-            const newHref = href.replace("{client_id_treckru}", clientId);
-            link.setAttribute("href", newHref);
-          }
-        });
-      } else {
-        setTimeout(checkCookie, 1000);
-      }
-    }
-    
-    setTimeout(checkCookie, 0);
-    
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(";").shift();
-    }
-    </script>
+
 <div class="container">
     <h1>Добро пожаловать!</h1>
     <p>Ваша комната в Москве уже совсем близко.</p>
